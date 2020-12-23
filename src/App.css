@@ -1,0 +1,91 @@
+.container {
+  color: white;
+  width: 100%;
+  display: flex;
+}
+
+h1{
+  color:rgba(255, 255, 255, 0.829);
+  font-size:1.5em;
+  background-color: rgb(87, 119, 206);
+  border:2px solid black;
+  padding:1rem;
+}
+.planets {
+  background-color: rgb(156, 204, 172);
+  width: 50%;
+  text-align: center;
+}
+
+.favorites {
+  text-align: center;
+  background-color: rgb(99, 183, 221);
+  width: 50%;
+}
+
+.planets ul ,.favorites ul{
+  list-style: none;
+  padding: 1rem;
+}
+
+.planets ul .planet {
+  display: flex;
+  margin: 1rem;
+  text-align: center;
+}
+
+.planets ul .planet li {
+  padding: 1rem;
+}
+
+.planets ul .planet li:nth-child(1) {
+  width: 70%;
+  background-color: rgb(111, 175, 204);
+  border-radius: 5px;
+}
+
+.planets ul .planet li:nth-child(2) {
+  background-color: rgb(26, 112, 26);
+  width: 30%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+/* Favorites */
+
+.favorites ul {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.favorites ul li{
+  background-color: violet;
+  padding:1rem;
+  margin:1rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+  .planets,.favorites{
+      width:100%;
+  }
+  .planets ul .planet {
+    flex-direction: column;
+  }
+  .planets ul .planet li:nth-child(1) {
+    width: 100%;
+  }
+  .planets ul .planet li:nth-child(2) {
+    width: 100%;
+    margin: 0;
+  }
+}
