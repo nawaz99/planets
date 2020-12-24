@@ -1,11 +1,10 @@
 import React from "react";
 
 const FavoritePlanets = ({ favorites }) => {
-  console.log(favorites);
-  const myfavorites = [];
+  let myfavorites = [];
   favorites.map((favorite) => {
     if (favorite.isFavourite) {
-      myfavorites.unshift(favorite);
+    myfavorites = [...myfavorites,favorite];
     }
     return null;
   });
@@ -14,8 +13,8 @@ const FavoritePlanets = ({ favorites }) => {
     <div className="favorites">
       <h1>FAVORITE PLANETS {myfavorites.length}</h1>
       <ul>
-        {myfavorites.map((favorite) => {
-          return <li>{favorite.name}</li>;
+        {myfavorites.map((favorite, index) => {
+          return <li key={index}>{favorite.name}</li>;
         })}
       </ul>
     </div>

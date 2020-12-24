@@ -17,7 +17,6 @@ const App = () => {
     });
     setData(mydata);
   };
-  console.log(data);
 
   return (
     <div className="container">
